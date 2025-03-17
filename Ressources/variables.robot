@@ -18,15 +18,24 @@ ${hyperspace}    xpath=//android.widget.CheckedTextView[@resource-id="android:id
 ${result_animation}    id=io.appium.android.apis:id/flipper
 #${result_animation}    xpath=//android.widget.TextView[@content-desc="Freedom"]
 
-${chronometer}    xpath=//android.widget.TextView[@content-desc="Chronometer"]
-${start}        id=io.appium.android.apis:id/start
-${stop}        id=io.appium.android.apis:id/stop
-${reset}       id=io.appium.android.apis:id/reset
-${set_format}       id=io.appium.android.apis:id/set_format
-${clear_format}       id=io.appium.android.apis:id/clear_format
-${status}        id=io.appium.android.apis:id/chronometer
+# Base ID for chronometer elements
+${base_id}    id=io.appium.android.apis:id/
 
+# Chronometer elements
+${chronometer}    xpath=//android.widget.TextView[@content-desc="Chronometer"]
+${start}        ${base_id}start
+${stop}        ${base_id}stop
+${reset}       ${base_id}reset
+${set_format}       ${base_id}set_format
+${clear_format}       ${base_id}clear_format
+${status}        ${base_id}chronometer
+
+# Select option
+
+${select_option}   ${base_id}
+
+# Seek bar elements
 ${seek_bar}   xpath=//android.widget.TextView[@content-desc="Seek Bar"]
 #${seek_bar}   id=Seek Bar
-${slide}   id=io.appium.android.apis:id/seek
+${slide}   ${base_id}seek
 

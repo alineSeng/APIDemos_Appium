@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-17T14:58:02.763489" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-17T16:48:01.178047" rpa="false" schemaversion="5">
 <suite id="s1" name="APIDemos test" source="c:\Users\Administrateur\OneDrive - M2I\Bureau\APIDemos\Tests\APIDemos_test.robot">
-<test id="s1-t1" name="Test APIDemos_Seek_Bar" line="30">
+<test id="s1-t1" name="Test APIDemos_Chronometer" line="21">
 <kw name="Given I open the apps" owner="keywords">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>${REMOTE_URL}</arg>
@@ -18,59 +18,95 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2025-03-17T14:58:02.942459" elapsed="5.317123"/>
+<status status="PASS" start="2025-03-17T16:48:01.343016" elapsed="5.582673"/>
 </kw>
-<status status="PASS" start="2025-03-17T14:58:02.941877" elapsed="5.318115"/>
+<status status="PASS" start="2025-03-17T16:48:01.342559" elapsed="5.583348"/>
 </kw>
 <kw name="When Click view" owner="keywords">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-03-17T14:58:08.262316" level="INFO">Clicking element 'xpath=//android.widget.TextView[@content-desc="Views"]'.</msg>
-<msg time="2025-03-17T14:58:10.565415" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Views"]</msg>
+<msg time="2025-03-17T16:48:06.927996" level="INFO">Clicking element 'xpath=//android.widget.TextView[@content-desc="Views"]'.</msg>
+<msg time="2025-03-17T16:48:09.582393" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Views"]</msg>
 <arg>${views}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-03-17T14:58:08.260927" elapsed="2.304717"/>
+<status status="PASS" start="2025-03-17T16:48:06.926884" elapsed="2.655695"/>
 </kw>
-<status status="PASS" start="2025-03-17T14:58:08.260561" elapsed="2.305214"/>
+<status status="PASS" start="2025-03-17T16:48:06.926531" elapsed="2.656157"/>
 </kw>
-<kw name="And Scroll dans view pour atteindre seek bar" owner="keywords">
-<kw name="Swipe" owner="AppiumLibrary">
-<arg>start_x=100</arg>
-<arg>start_y=1700</arg>
-<arg>offset_x=0</arg>
-<arg>offset_y=-100</arg>
-<doc>Swipe from one point to another point, for an optional duration.</doc>
-<status status="PASS" start="2025-03-17T14:58:10.567167" elapsed="1.298455"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2025-03-17T14:58:12.972887" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Seek Bar"]</msg>
-<arg>${seek_bar}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-03-17T14:58:11.865906" elapsed="1.107273"/>
-</kw>
+<kw name="And Click chronometer" owner="keywords">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-03-17T14:58:12.974356" level="INFO">Clicking element 'xpath=//android.widget.TextView[@content-desc="Seek Bar"]'.</msg>
-<msg time="2025-03-17T14:58:14.332319" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Seek Bar"]</msg>
-<arg>${seek_bar}</arg>
+<msg time="2025-03-17T16:48:09.584930" level="INFO">Clicking element 'xpath=//android.widget.TextView[@content-desc="Chronometer"]'.</msg>
+<msg time="2025-03-17T16:48:10.979474" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Chronometer"]</msg>
+<arg>${chronometer}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-03-17T14:58:12.973422" elapsed="1.359236"/>
+<status status="PASS" start="2025-03-17T16:48:09.583500" elapsed="1.396175"/>
 </kw>
-<status status="PASS" start="2025-03-17T14:58:10.566676" elapsed="3.766149"/>
+<status status="PASS" start="2025-03-17T16:48:09.583154" elapsed="1.396626"/>
 </kw>
-<kw name="And Mettez la bar à 88" owner="keywords">
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-03-17T14:58:14.335567" level="INFO">Typing text '88' into text field 'id=io.appium.android.apis:id/seek'</msg>
-<msg time="2025-03-17T14:58:14.383506" level="INFO">criteria is io.appium.android.apis:id/seek</msg>
-<arg>${slide}</arg>
-<arg>88</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-03-17T14:58:14.333856" elapsed="0.049945"/>
+<kw name="And Click select_option" owner="keywords">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-17T16:48:10.981516" level="INFO">Clicking element 'id=io.appium.android.apis:id/start'.</msg>
+<msg time="2025-03-17T16:48:11.593401" level="INFO">criteria is io.appium.android.apis:id/start</msg>
+<arg>${select_option}${option}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-17T16:48:10.980539" elapsed="0.613036"/>
 </kw>
-<status status="PASS" start="2025-03-17T14:58:14.333455" elapsed="0.050596"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-17T16:48:16.594341" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-17T16:48:11.593720" elapsed="5.001057"/>
 </kw>
-<status status="PASS" start="2025-03-17T14:58:02.941168" elapsed="11.443389"/>
+<kw name="Get Text" owner="AppiumLibrary">
+<msg time="2025-03-17T16:48:16.652248" level="INFO">Element 'id=io.appium.android.apis:id/chronometer' text is 'Initial format: 00:06' </msg>
+<msg time="2025-03-17T16:48:16.652440" level="INFO">criteria is io.appium.android.apis:id/chronometer</msg>
+<msg time="2025-03-17T16:48:16.652547" level="INFO">${status_text} = Initial format: 00:06</msg>
+<var>${status_text}</var>
+<arg>${status}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<status status="PASS" start="2025-03-17T16:48:16.595206" elapsed="0.057400"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Le status récupéré : ${status_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-17T16:48:16.652745" elapsed="0.000566"/>
+</kw>
+<arg>${option}</arg>
+<status status="PASS" start="2025-03-17T16:48:10.980247" elapsed="5.673169"/>
+</kw>
+<kw name="And Click select_option" owner="keywords">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-17T16:48:16.655211" level="INFO">Clicking element 'id=io.appium.android.apis:id/set_format'.</msg>
+<msg time="2025-03-17T16:48:17.397595" level="INFO">criteria is io.appium.android.apis:id/set_format</msg>
+<arg>${select_option}${option}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-17T16:48:16.654125" elapsed="0.743710"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-17T16:48:22.398647" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-17T16:48:17.397993" elapsed="5.001004"/>
+</kw>
+<kw name="Get Text" owner="AppiumLibrary">
+<msg time="2025-03-17T16:48:22.437704" level="INFO">Element 'id=io.appium.android.apis:id/chronometer' text is 'Formatted time (00:12)' </msg>
+<msg time="2025-03-17T16:48:22.437859" level="INFO">criteria is io.appium.android.apis:id/chronometer</msg>
+<msg time="2025-03-17T16:48:22.437961" level="INFO">${status_text} = Formatted time (00:12)</msg>
+<var>${status_text}</var>
+<arg>${status}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<status status="PASS" start="2025-03-17T16:48:22.399286" elapsed="0.038733"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Le status récupéré : ${status_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-17T16:48:22.438154" elapsed="0.000579"/>
+</kw>
+<arg>${option2}</arg>
+<status status="PASS" start="2025-03-17T16:48:16.653851" elapsed="5.785018"/>
+</kw>
+<status status="PASS" start="2025-03-17T16:48:01.342022" elapsed="21.097450"/>
 </test>
-<status status="PASS" start="2025-03-17T14:58:02.767282" elapsed="11.618470"/>
+<status status="PASS" start="2025-03-17T16:48:01.181492" elapsed="21.259288"/>
 </suite>
 <statistics>
 <total>
